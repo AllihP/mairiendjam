@@ -1,59 +1,81 @@
 /* ============================================================
-   CSS VARIABLES — Mairie de N'Djamena Design System
+   DESIGN SYSTEM — Mairie de N'Djamena
+   Palette : Navy · Or · Blanc — 3 couleurs, 1 accent
 ============================================================ */
 :root {
-  /* Brand */
-  --bleu:        #003580;
-  --bleu-sombre: #001f4d;
-  --bleu-clair:  #1a4fa0;
-  --or:          #C8960C;
-  --or-clair:    #f0b429;
-  --or-pale:     #fdf3dc;
-  --rouge:       #C60C30;
-  --vert:        #38b148;
+  /* ── Palette principale (3 couleurs) ── */
+  --navy:        #0F2044;   /* Navy profond — autorité, confiance */
+  --navy-mid:    #1a3563;   /* Navy moyen — hover, cards */
+  --navy-light:  #2a4a8a;   /* Navy clair — éléments secondaires */
+  --gold:        #B8860B;   /* Or foncé — accent principal */
+  --gold-bright: #D4A017;   /* Or vif — hover, highlights */
+  --gold-pale:   #FDF6E3;   /* Or très pâle — fonds de cards */
 
-  /* Neutrals */
-  --blanc:       #fafaf8;
-  --gris:        #f4f2ee;
-  --gris-moyen:  #9b9b8e;
-  --texte:       #1a1a2e;
-  --texte-doux:  #4a4a5a;
-  --border:      #e2e8f0;
+  /* ── Neutres confortables ── */
+  --white:       #FFFFFF;
+  --off-white:   #F8F7F4;   /* Blanc cassé — fond principal */
+  --gray-50:     #F3F4F6;   /* Fond sections alternées */
+  --gray-100:    #E8EAF0;   /* Bordures, dividers */
+  --gray-400:    #9CA3AF;   /* Texte secondaire */
+  --gray-600:    #4B5563;   /* Texte corps */
+  --gray-900:    #111827;   /* Texte titres */
 
-  /* Section accent colors */
-  --accent-home:       #003580;
-  --accent-arr:        #1a6b3a;
-  --accent-services:   #003580;
-  --accent-etatcivil:  #003580;
-  --accent-urbanisme:  #8B4513;
-  --accent-eau:        #0369a1;
-  --accent-voirie:     #374151;
-  --accent-sante:      #C60C30;
-  --accent-education:  #7c3aed;
-  --accent-env:        #15803d;
-  --accent-fiscalite:  #b45309;
-  --accent-admin:      #2d1b69;
-  --accent-demarches:  #0d6efd;
-  --accent-actualites: #003580;
-  --accent-contact:    #38b148;
+  /* ── Couleur fonctionnelle (1 seule) ── */
+  --success:     #166534;   /* Vert Tchad — uniquement formulaires/succès */
 
-  /* Transitions */
-  --transition: 0.3s ease;
-  --radius: 12px;
-  --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-  --shadow-md: 0 4px 20px rgba(0,0,0,0.12);
-  --shadow-lg: 0 12px 40px rgba(0,0,0,0.18);
+  /* ── Rétrocompatibilité (ancien naming → nouveau) ── */
+  --bleu:        var(--navy);
+  --bleu-sombre: var(--navy);
+  --bleu-clair:  var(--navy-light);
+  --or:          var(--gold);
+  --or-clair:    var(--gold-bright);
+  --or-pale:     var(--gold-pale);
+  --rouge:       #B91C1C;
+  --vert:        var(--success);
+  --blanc:       var(--off-white);
+  --gris:        var(--gray-50);
+  --gris-moyen:  var(--gray-400);
+  --texte:       var(--gray-900);
+  --texte-doux:  var(--gray-600);
+  --border:      var(--gray-100);
+
+  /* ── SECTION ACCENTS : 2 variantes seulement ── */
+  --accent-home:        var(--navy);
+  --accent-arr:         var(--navy-mid);
+  --accent-services:    var(--navy);
+  --accent-etatcivil:   var(--navy);
+  --accent-urbanisme:   var(--navy-mid);
+  --accent-eau:         var(--navy-light);
+  --accent-voirie:      var(--navy-mid);
+  --accent-sante:       var(--navy);
+  --accent-education:   var(--navy-mid);
+  --accent-env:         var(--navy-light);
+  --accent-fiscalite:   var(--navy-mid);
+  --accent-admin:       var(--navy);
+  --accent-demarches:   var(--navy);
+  --accent-actualites:  var(--navy);
+  --accent-contact:     var(--navy);
+
+  /* ── Tokens de design ── */
+  --transition:  0.25s ease;
+  --radius-sm:   6px;
+  --radius:      10px;
+  --radius-lg:   16px;
+  --shadow-sm:   0 1px 3px rgba(15,32,68,.08), 0 1px 2px rgba(15,32,68,.06);
+  --shadow-md:   0 4px 16px rgba(15,32,68,.10), 0 2px 6px rgba(15,32,68,.08);
+  --shadow-lg:   0 12px 36px rgba(15,32,68,.14), 0 4px 12px rgba(15,32,68,.10);
 }
 
-/* ─── Reset ─────────────────────────────────────────────── */
+/* ── Reset ──────────────────────────────────────────── */
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
 body{
   font-family:'DM Sans',sans-serif;
-  background:var(--blanc);
-  color:var(--texte);
+  background:var(--off-white);
+  color:var(--gray-900);
   overflow-x:hidden;
   -webkit-font-smoothing:antialiased;
+  line-height:1.6;
 }
 a{text-decoration:none;color:inherit}
 ul{list-style:none}
@@ -61,88 +83,140 @@ img{max-width:100%;height:auto;display:block}
 button{cursor:pointer;font-family:inherit}
 body.no-scroll{overflow:hidden}
 
-/* ─── Page transitions ──────────────────────────────────── */
-.page-enter{opacity:0;transform:translateY(18px)}
-.page-enter-active{opacity:1;transform:none;transition:opacity .4s ease,transform .4s ease}
-.page-exit{opacity:1}
-.page-exit-active{opacity:0;transition:opacity .25s ease}
-
-/* ─── Animations ────────────────────────────────────────── */
-@keyframes fadeUp   {from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
-@keyframes fadeDown {from{opacity:0;transform:translateY(-16px)}to{opacity:1;transform:none}}
+/* ── Animations ────────────────────────────────────── */
+@keyframes fadeUp   {from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes fadeDown {from{opacity:0;transform:translateY(-12px)}to{opacity:1;transform:none}}
 @keyframes fadeIn   {from{opacity:0}to{opacity:1}}
-@keyframes pulse    {0%,100%{opacity:1}50%{opacity:.3}}
+@keyframes pulse    {0%,100%{opacity:1}50%{opacity:.4}}
 @keyframes ticker   {from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes waveMove {from{transform:translateX(0)}to{transform:translateX(-50%)}}
 @keyframes loadbar  {to{width:100%}}
-@keyframes pulselogo{0%,100%{transform:scale(1)}50%{transform:scale(1.06)}}
+@keyframes pulselogo{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
 @keyframes spin     {to{transform:rotate(360deg)}}
 
-/* ─── Utilities ─────────────────────────────────────────── */
-.container{max-width:1280px;margin:0 auto;padding:0 2rem}
+/* ── Layout helpers ─────────────────────────────────── */
+.container{max-width:1240px;margin:0 auto;padding:0 2rem}
 .section-pad{padding:80px 2rem}
+
+/* ── Section header ─────────────────────────────────── */
 .section-tag{
-  display:inline-flex;align-items:center;gap:8px;
-  font-size:.75rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
-  color:var(--or);margin-bottom:.75rem;
+  display:inline-flex;align-items:center;gap:10px;
+  font-size:.72rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold);margin-bottom:.6rem;
 }
-.section-tag::before{content:'';width:24px;height:2px;background:var(--or);flex-shrink:0}
+.section-tag::before{
+  content:'';width:28px;height:2px;
+  background:linear-gradient(90deg,var(--gold),var(--gold-bright));
+  border-radius:1px;flex-shrink:0;
+}
 .section-title{
   font-family:'Playfair Display',serif;
-  font-size:clamp(1.8rem,3.5vw,2.8rem);font-weight:800;
-  color:var(--bleu-sombre);line-height:1.2;margin-bottom:.6rem;
+  font-size:clamp(1.7rem,3vw,2.6rem);font-weight:800;
+  color:var(--navy);line-height:1.2;margin-bottom:.5rem;
+  letter-spacing:-.01em;
 }
 .section-sub{
-  color:var(--texte-doux);font-size:1rem;
-  max-width:560px;line-height:1.7;margin-bottom:2.5rem;
+  color:var(--gray-600);font-size:.975rem;
+  max-width:520px;line-height:1.75;margin-bottom:2.5rem;
 }
 
-/* ─── Buttons ───────────────────────────────────────────── */
+/* ── Buttons — système épuré ────────────────────────── */
 .btn-primary{
-  background:var(--or);color:var(--bleu-sombre);
-  padding:13px 30px;border:none;border-radius:8px;
-  font-size:.93rem;font-weight:700;
+  background:var(--navy);color:#fff;
+  padding:12px 28px;border:none;border-radius:var(--radius-sm);
+  font-size:.9rem;font-weight:600;letter-spacing:.01em;
   display:inline-flex;align-items:center;gap:8px;
   transition:background var(--transition),transform .15s,box-shadow var(--transition);
-  box-shadow:0 4px 20px rgba(200,150,12,.4);
+  box-shadow:0 2px 8px rgba(15,32,68,.3);
 }
-.btn-primary:hover{background:var(--or-clair);transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,150,12,.5)}
-.btn-secondary{
-  background:transparent;color:#fff;
-  padding:13px 30px;border:1.5px solid rgba(255,255,255,.45);border-radius:8px;
-  font-size:.93rem;font-weight:600;
+.btn-primary:hover{
+  background:var(--navy-mid);
+  transform:translateY(-1px);
+  box-shadow:0 6px 20px rgba(15,32,68,.25);
+}
+/* Variante or pour CTA principaux */
+.btn-gold{
+  background:var(--gold);color:#fff;
+  padding:12px 28px;border:none;border-radius:var(--radius-sm);
+  font-size:.9rem;font-weight:600;
   display:inline-flex;align-items:center;gap:8px;
-  transition:border-color var(--transition),background var(--transition),transform .15s;
+  transition:all var(--transition);
+  box-shadow:0 2px 8px rgba(184,134,11,.25);
+}
+.btn-gold:hover{background:var(--gold-bright);transform:translateY(-1px)}
+.btn-secondary{
+  background:transparent;color:var(--navy);
+  padding:11px 26px;
+  border:1.5px solid var(--gray-100);
+  border-radius:var(--radius-sm);
+  font-size:.9rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all var(--transition);
   backdrop-filter:blur(8px);
 }
-.btn-secondary:hover{border-color:var(--or-clair);background:rgba(200,150,12,.12);transform:translateY(-2px)}
+.btn-secondary:hover{
+  border-color:var(--navy);
+  background:var(--navy);color:#fff;
+}
+/* btn-secondary sur fond sombre */
+.btn-secondary-light{
+  background:rgba(255,255,255,.1);color:#fff;
+  padding:11px 26px;
+  border:1.5px solid rgba(255,255,255,.25);
+  border-radius:var(--radius-sm);
+  font-size:.9rem;font-weight:600;
+  display:inline-flex;align-items:center;gap:8px;
+  transition:all var(--transition);
+  backdrop-filter:blur(8px);
+}
+.btn-secondary-light:hover{
+  background:rgba(255,255,255,.2);
+  border-color:rgba(255,255,255,.5);
+}
 .btn-outline{
   background:transparent;
-  padding:11px 26px;border:2px solid var(--bleu);border-radius:8px;
-  font-size:.9rem;font-weight:600;color:var(--bleu);
+  padding:10px 24px;border:1.5px solid var(--navy);border-radius:var(--radius-sm);
+  font-size:.88rem;font-weight:600;color:var(--navy);
   display:inline-flex;align-items:center;gap:8px;
   transition:all var(--transition);
 }
-.btn-outline:hover{background:var(--bleu);color:#fff}
+.btn-outline:hover{background:var(--navy);color:#fff}
 
-/* ─── Card base ─────────────────────────────────────────── */
+/* ── Card base ──────────────────────────────────────── */
 .card{
   background:#fff;border-radius:var(--radius);
-  border:1px solid transparent;
+  border:1px solid var(--gray-100);
   box-shadow:var(--shadow-sm);
-  transition:border-color var(--transition),box-shadow var(--transition),transform .2s;
+  transition:box-shadow var(--transition),transform .2s;
 }
-.card:hover{box-shadow:var(--shadow-md);transform:translateY(-4px)}
+.card:hover{box-shadow:var(--shadow-md);transform:translateY(-3px)}
 
-/* ─── Spinner ───────────────────────────────────────────── */
+/* ── Spinner ────────────────────────────────────────── */
 .spinner{
-  width:40px;height:40px;border:3px solid var(--border);
-  border-top-color:var(--bleu);border-radius:50%;
-  animation:spin .8s linear infinite;margin:60px auto;
+  width:36px;height:36px;
+  border:2px solid var(--gray-100);
+  border-top-color:var(--navy);border-radius:50%;
+  animation:spin .7s linear infinite;margin:60px auto;
 }
 
-/* ─── RTL support ───────────────────────────────────────── */
+/* ── Divider ────────────────────────────────────────── */
+.divider{
+  height:1px;background:var(--gray-100);
+  border:none;margin:0;
+}
+
+/* ── Badge ──────────────────────────────────────────── */
+.badge{
+  display:inline-flex;align-items:center;
+  padding:3px 10px;border-radius:50px;
+  font-size:.7rem;font-weight:700;
+  text-transform:uppercase;letter-spacing:.08em;
+}
+.badge-gold{background:var(--gold-pale);color:var(--gold)}
+.badge-navy{background:rgba(15,32,68,.08);color:var(--navy)}
+
+/* ── RTL ────────────────────────────────────────────── */
 [dir="rtl"] .section-tag{flex-direction:row-reverse}
 [dir="rtl"] .section-tag::before{content:none}
-[dir="rtl"] .section-tag::after{content:'';width:24px;height:2px;background:var(--or)}
+[dir="rtl"] .section-tag::after{content:'';width:28px;height:2px;background:linear-gradient(90deg,var(--gold),var(--gold-bright))}
 [dir="rtl"] body{font-family:'DM Sans','Segoe UI',Tahoma,sans-serif}

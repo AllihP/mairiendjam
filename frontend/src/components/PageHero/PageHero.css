@@ -1,47 +1,60 @@
 .page-hero{
-  background:linear-gradient(150deg,rgba(0,21,64,.92) 0%,rgba(0,53,128,.82) 60%,rgba(0,0,0,.4) 100%),
-  url('https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/N%27Djamena_vue_du_ciel.jpg/1280px-N%27Djamena_vue_du_ciel.jpg') center/cover no-repeat;
-  padding:72px 2rem 60px;position:relative;overflow:hidden;
+  background:linear-gradient(150deg,rgba(15,32,68,.94) 0%,rgba(26,53,99,.88) 60%,rgba(15,32,68,.95) 100%),
+    url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=1600&q=70&fit=crop') center/cover no-repeat;
+  padding:64px 2rem 52px;position:relative;overflow:hidden;
 }
+/* Ligne décorative subtile */
 .page-hero::before{
-  content:'';position:absolute;inset:0;
-  background:repeating-linear-gradient(45deg,transparent,transparent 60px,rgba(200,150,12,.02) 60px,rgba(200,150,12,.02) 62px);
+  content:'';position:absolute;
+  left:0;top:0;bottom:0;width:4px;
+  background:linear-gradient(to bottom,var(--gold) 0%,var(--gold-bright) 100%);
 }
-.page-hero-flag{position:absolute;left:0;top:0;bottom:0;width:6px;background:linear-gradient(to bottom,#003580 33.33%,#FECB00 33.33% 66.66%,#C60C30 66.66%);opacity:.9}
-.page-hero-inner{position:relative;z-index:1}
+/* Pattern discret */
+.page-hero::after{
+  content:'';position:absolute;inset:0;
+  background-image:radial-gradient(circle,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:32px 32px;pointer-events:none;
+}
+.page-hero-inner{position:relative;z-index:1;padding-left:1rem}
+
 /* Breadcrumb */
-.breadcrumb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:1.5rem}
-.bc-item{color:rgba(255,255,255,.7);font-size:.8rem;transition:color .2s}
-.bc-item:hover{color:var(--or-clair)}
-.bc-current{color:var(--hero-accent,var(--or-clair));font-weight:600}
-.bc-sep{color:rgba(255,255,255,.35);font-size:.65rem}
+.breadcrumb{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:1.4rem}
+.bc-item{color:rgba(255,255,255,.55);font-size:.78rem;transition:color var(--transition)}
+.bc-item:hover{color:rgba(255,255,255,.9)}
+.bc-current{color:var(--gold-bright);font-weight:600}
+.bc-sep{color:rgba(255,255,255,.25);font-size:.6rem}
+
 /* Icon */
 .page-hero-icon{
-  width:64px;height:64px;
-  background:var(--hero-accent,var(--or));
-  border-radius:14px;display:flex;align-items:center;justify-content:center;
-  font-size:1.8rem;margin-bottom:1.2rem;
-  box-shadow:0 4px 20px rgba(0,0,0,.3);
-  color:#fff;
+  width:56px;height:56px;
+  background:rgba(184,134,11,.18);
+  border:1px solid rgba(184,134,11,.3);
+  border-radius:var(--radius);
+  display:flex;align-items:center;justify-content:center;
+  font-size:1.5rem;margin-bottom:1rem;
+  color:var(--gold-bright);
+  backdrop-filter:blur(8px);
 }
+
 /* Title */
 .page-hero-title{
   font-family:'Playfair Display',serif;
-  font-size:clamp(2rem,5vw,3.5rem);font-weight:900;
-  color:#fff;line-height:1.15;margin-bottom:.75rem;
-  animation:fadeUp .6s ease both;
+  font-size:clamp(1.8rem,4.5vw,3rem);
+  font-weight:900;color:#fff;
+  line-height:1.15;margin-bottom:.6rem;
+  letter-spacing:-.01em;
+  animation:fadeUp .5s ease both;
 }
-.page-hero-sub{
-  font-size:1.05rem;color:rgba(255,255,255,.8);
-  max-width:620px;line-height:1.7;
-  animation:fadeUp .6s .1s ease both;
-}
-/* Accent underline on title */
 .page-hero-title::after{
   content:'';display:block;
-  width:60px;height:4px;
-  background:var(--hero-accent,var(--or));
+  width:44px;height:3px;
+  background:var(--gold);
   border-radius:2px;margin-top:.6rem;
-  animation:fadeIn .8s .3s ease both;
+  animation:fadeIn .6s .2s ease both;
 }
-@media(max-width:600px){.page-hero{padding:56px 1.2rem 44px}}
+.page-hero-sub{
+  font-size:.975rem;color:rgba(255,255,255,.7);
+  max-width:580px;line-height:1.75;
+  animation:fadeUp .5s .1s ease both;
+}
+@media(max-width:600px){.page-hero{padding:48px 1.2rem 40px}}
