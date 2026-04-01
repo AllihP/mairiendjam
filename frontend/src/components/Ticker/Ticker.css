@@ -1,0 +1,5 @@
+.ticker-wrap{background:var(--bleu-sombre);border-top:2px solid var(--or);border-bottom:2px solid var(--or);padding:10px 0;overflow:hidden;white-space:nowrap}
+.ticker-track{display:inline-flex;animation:ticker 40s linear infinite;gap:3rem}
+.ticker-track:hover{animation-play-state:paused}
+.ticker-item{display:inline-flex;align-items:center;gap:8px;font-size:.82rem;color:rgba(255,255,255,.82);flex-shrink:0;padding:0 .5rem}
+.ticker-item::before{content:'◆';color:var(--or);font-size:.5rem}

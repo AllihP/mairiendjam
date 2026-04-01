@@ -1,0 +1,12 @@
+.topbar{background:var(--bleu-sombre);color:rgba(255,255,255,.78);font-size:.78rem;padding:7px 0;border-bottom:2px solid var(--or)}
+.topbar-inner{max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap}
+.topbar-left,.topbar-right{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.topbar-link{background:none;border:none;color:rgba(255,255,255,.78);font-size:.78rem;font-family:inherit;cursor:pointer;transition:color var(--transition);display:flex;align-items:center;gap:4px}
+.topbar-link:hover{color:var(--or-clair)}
+.topbar-link i{font-size:.75rem}
+.urgences-btn{color:var(--or-clair)!important}
+.lang-switcher{display:flex;align-items:center;gap:4px;background:rgba(255,255,255,.08);border-radius:20px;padding:3px 8px}
+.lang-btn{background:none;border:none;color:rgba(255,255,255,.65);font-size:.72rem;font-weight:600;letter-spacing:.06em;padding:2px 7px;border-radius:12px;transition:background var(--transition),color var(--transition);cursor:pointer;font-family:inherit}
+.lang-btn.active,.lang-btn:hover{background:var(--or);color:var(--bleu-sombre)}
+.lang-sep{color:rgba(255,255,255,.25);font-size:.65rem}
+@media(max-width:600px){.topbar-inner{flex-direction:column;align-items:flex-start;gap:6px}}

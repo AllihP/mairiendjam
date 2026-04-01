@@ -1,0 +1,29 @@
+.contact-layout{display:grid;grid-template-columns:320px 1fr;gap:3rem;align-items:start}
+.contact-info-col{display:flex;flex-direction:column;gap:1rem}
+.ci-card{display:flex;gap:14px;background:#fff;border-radius:10px;padding:1.1rem;box-shadow:var(--shadow-sm);border:1px solid var(--border);transition:box-shadow .2s}
+.ci-card:hover{box-shadow:var(--shadow-md)}
+.ci-icon{width:44px;height:44px;flex-shrink:0;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:#fff}
+.ci-label{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;color:var(--gris-moyen);font-weight:600;margin-bottom:2px}
+.ci-val{font-weight:600;color:var(--texte);font-size:.9rem;line-height:1.6}
+.ci-hours{background:var(--bleu-sombre);border-radius:12px;padding:1.4rem;color:#fff}
+.ci-hours h4{font-family:'Playfair Display',serif;font-size:.95rem;color:var(--or-clair);margin-bottom:.75rem;display:flex;align-items:center;gap:6px}
+.ci-hour-row{padding:6px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.85rem;color:rgba(255,255,255,.8)}
+.ci-hour-row:last-child{border:none}
+.ci-hour-row.closed{color:var(--rouge);opacity:.8}
+/* Form */
+.contact-form-col{background:#fff;border-radius:14px;box-shadow:var(--shadow-md);overflow:hidden}
+.cf-header{background:var(--bleu);padding:1.8rem 2rem}
+.cf-header h2{font-family:'Playfair Display',serif;font-size:1.5rem;color:#fff;margin-bottom:.4rem}
+.cf-header p{font-size:.85rem;color:rgba(255,255,255,.7);line-height:1.6}
+.contact-form{padding:2rem}
+.cf-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+.cf-group{margin-bottom:1rem;display:flex;flex-direction:column;gap:5px}
+.cf-group label{font-size:.78rem;font-weight:600;color:var(--texte-doux);letter-spacing:.05em;text-transform:uppercase}
+.cf-group input,.cf-group select,.cf-group textarea{background:var(--gris);border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;color:var(--texte);font-size:.9rem;font-family:inherit;transition:border-color .2s,box-shadow .2s;outline:none;resize:vertical}
+.cf-group input:focus,.cf-group select:focus,.cf-group textarea:focus{border-color:var(--vert);box-shadow:0 0 0 3px rgba(56,177,72,.12)}
+.cf-group input.error,.cf-group select.error,.cf-group textarea.error{border-color:var(--rouge)}
+.cf-error{font-size:.75rem;color:var(--rouge);font-weight:600}
+.cf-submit{margin-top:.5rem;padding:14px;font-size:1rem}
+.cf-submit:disabled{opacity:.7;cursor:not-allowed}
+@media(max-width:900px){.contact-layout{grid-template-columns:1fr}}
+@media(max-width:600px){.cf-row{grid-template-columns:1fr}}

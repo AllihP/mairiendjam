@@ -1,0 +1,9 @@
+.stats-band{background:var(--or-pale);border-top:3px solid var(--or);border-bottom:3px solid var(--or);padding:52px 2rem}
+.stats-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:2rem;text-align:center;max-width:1280px;margin:0 auto}
+.stat-card{display:flex;flex-direction:column;align-items:center;gap:4px;cursor:default;transition:transform .2s}
+.stat-card:hover{transform:translateY(-3px)}
+.stat-num{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:900;color:var(--bleu-sombre);line-height:1}
+.stat-unit{font-size:1.3rem;color:var(--or);font-weight:700}
+.stat-label{font-size:.82rem;color:var(--texte-doux);text-transform:uppercase;letter-spacing:.08em}
+@media(max-width:900px){.stats-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.stats-grid{grid-template-columns:repeat(2,1fr)}}

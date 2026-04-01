@@ -1,0 +1,13 @@
+#preloader{position:fixed;inset:0;background:var(--bleu-sombre);z-index:9999;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;animation:fadeIn .3s ease}
+.preloader-content{position:relative;z-index:10;display:flex;flex-direction:column;align-items:center;color:#fff;text-align:center;gap:1rem}
+.loader-logo{width:110px;height:110px;border-radius:50%;object-fit:cover;box-shadow:0 0 0 6px rgba(200,150,12,.35),0 0 0 12px rgba(200,150,12,.12);animation:pulselogo 2.2s infinite ease-in-out}
+.loader-title{font-family:'Cinzel',serif;font-size:1.15rem;font-weight:700;letter-spacing:.08em}
+.loader-sub{font-size:.85rem;color:var(--or-clair)}
+.loader-bar{width:180px;height:3px;background:rgba(255,255,255,.15);border-radius:2px;overflow:hidden}
+.loader-bar-fill{height:100%;width:0;background:linear-gradient(90deg,var(--or),var(--or-clair));animation:loadbar 1.8s ease forwards}
+.loader-text{font-size:.82rem;color:rgba(255,255,255,.7);letter-spacing:.06em}
+.preloader-waves{position:absolute;bottom:0;left:0;width:100%;height:160px;overflow:hidden}
+.wave-layer{position:absolute;bottom:0;left:0;width:200%;height:100%;background-repeat:repeat-x;animation:waveMove 20s linear infinite}
+.wave-layer:nth-child(1){background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'><path fill='%23C8960C' fill-opacity='0.45' d='M0,288L80,261C160,235,320,181,480,176C640,171,800,213,960,208C1120,203,1280,150,1360,124L1440,99L1440,320L0,320Z'/></svg>");animation-duration:22s}
+.wave-layer:nth-child(2){background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'><path fill='%231a4fa0' fill-opacity='0.55' d='M0,192L80,171C160,149,320,107,480,112C640,117,800,171,960,181C1120,192,1280,160,1360,144L1440,128L1440,320L0,320Z'/></svg>");animation-duration:18s;bottom:10px}
+.wave-layer:nth-child(3){background-image:url("data:image/svg+xml;utf8,<svg viewBox='0 0 1440 320' xmlns='http://www.w3.org/2000/svg'><path fill='%2338b148' fill-opacity='0.3' d='M0,160L80,165C160,171,320,181,480,160C640,139,800,85,960,85C1120,85,1280,139,1360,165L1440,192L1440,320L0,320Z'/></svg>");animation-duration:26s;bottom:20px}

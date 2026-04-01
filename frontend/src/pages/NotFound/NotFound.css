@@ -1,0 +1,11 @@
+.notfound{min-height:70vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:4rem 2rem;gap:1rem}
+.nf-flag{display:flex;gap:0;margin-bottom:1rem;border-radius:4px;overflow:hidden}
+.nf-flag span{width:24px;height:60px}
+.nf-code{font-family:'Playfair Display',serif;font-size:8rem;font-weight:900;color:var(--bleu);line-height:1;opacity:.15}
+.nf-title{font-family:'Playfair Display',serif;font-size:2rem;font-weight:800;color:var(--bleu-sombre);margin-top:-3rem}
+.nf-sub{color:var(--texte-doux);max-width:420px;line-height:1.7}
+.nf-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-top:.5rem}
+.nf-links{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;justify-content:center;margin-top:1rem}
+.nf-links a{color:var(--bleu);font-size:.875rem;font-weight:600}
+.nf-links a:hover{color:var(--or)}
+.nf-links span{color:var(--gris-moyen)}
