@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏛️ Mairie de N'Djamena — Portail Officiel
 
 Application web multi-pages pour la Commune de N'Djamena.  
@@ -151,3 +152,7 @@ Le système de couleur active fonctionne via la variable CSS `--active-accent` i
 ---
 
 © 2026 Commune de N'Djamena — Direction des Systèmes d'Information
+=======
+# mairiendjam
+La mairie de N'djaména
+>>>>>>> d7afc00da49a5371ebea1cb809acaebcc09afa68
